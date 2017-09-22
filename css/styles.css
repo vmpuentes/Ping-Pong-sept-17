@@ -1,0 +1,16 @@
+.jumbotron {
+  background-image: url("../img/background.jpg");
+  background-size: contain;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+#gump {
+  text-align: center;
+}
