@@ -6,7 +6,7 @@
 //var pingPongArray = ["Ping", "Pong", "PING-PONG"];
 //var outputArray = [(<li>" "</li>)];
 function PingPong (intialInput) {
-  var outputArray = [(<li>" "</li>).hide().fadein(200))];
+  var outputArray = [(<li>" "</li>)];
 for (var i = 1, i<= (intialInput), i ++ )
   if (i % 3 === 0) {
     outputArray.push('<img src="img/ping1.jpg">PING!')
