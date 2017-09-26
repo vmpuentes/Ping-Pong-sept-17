@@ -14,6 +14,8 @@ for (var i = 1, i<= (intialInput), i ++ )
     outputArray.push('<img src="img/pong1.jpg">Pong!')
   } else if (i % 15 === 0) {
     outputArray.push('<img src="img/ping-pong.jpg">PING-PONG')
+  } else {
+    output.push(i);
   }
 return outputArray;
   }
@@ -22,9 +24,13 @@ return outputArray;
 //User Logic
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
-    var userInput = parseInt($("#numberInput").val());
     event.preventDefault();
-    
+    var userInput = parseInt($("#numberInput").val());
+    var pingPongResult = PingPong(intialInput);
+    pingPongResult.forEach(number) {
+      $("ul.output").append("<li>" + number + "</li>");
+    }
+
 
   }
 }
