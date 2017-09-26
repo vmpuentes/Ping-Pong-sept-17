@@ -5,24 +5,26 @@
 //---in the HTML file.
 //var pingPongArray = ["Ping", "Pong", "PING-PONG"];
 //var outputArray = [(<li>" "</li>)];
-for (var i = 0, i<= (pingPong.length), i ++ )
+function PingPong (intialInput) {
+  var outputArray = [(<li>" "</li>).hide().fadein(200))];
+for (var i = 1, i<= (intialInput), i ++ )
   if (i % 3 === 0) {
-    var outputNumber = pingPongArray.splice(pos, 0).append('<img src="img/gump.png">PING-PONG!').hide().fadein(200);
+    outputArray.push('<img src="img/ping1.jpg">PING!')
   ] else if (i % 5 === 0) {
-    var outPutNumber = pingPongArray.splice(pos, 1).append('<img src="img/PONG').hide().fadein(200);
+    outputArray.push('<img src="img/pong1.jpg">Pong!')
   } else if (i % 15 === 0) {
-    var outPutNumber = pingPongArray.splice(pos, 2).append('PING-PONG').hide().fadein(200);
+    outputArray.push('<img src="img/ping-pong.jpg">PING-PONG')
   }
 return outputArray;
+  }
 }
-
 
 //User Logic
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
     var userInput = parseInt($("#numberInput").val());
     event.preventDefault();
-    console.log(userInput);
+    
 
   }
 }
