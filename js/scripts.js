@@ -7,9 +7,9 @@
 //var outputArray = [(<li>" "</li>)];
 function PingPong (userInput) {
   var outputArray = [(<li>" "</li>)];
-for (var i = 1, i<= (intialInput), i ++ )
+for (var i = 1, i<= (userInput), i ++ )
   if (i % 3 === 0) {
-    outputArray.push('<img src="img/ping1.jpg">PING!')
+    outputArray.push("PING!")
   ] else if (i % 5 === 0) {
     outputArray.push('<img src="img/pong1.jpg">Pong!')
   } else if (i % 15 === 0) {
@@ -26,8 +26,8 @@ $(document).ready(function() {
   $("#formOne").submit(function(event) {
     var userInput = parseInt($("#numberInput").val());
     var pingPongResult = PingPong(userInput);
-    pingPongResult.forEach(userInput) {
-      $("#resultOutput").append("<li>" +  + "</li>");
+    pingPongResult.forEach(function(userInputs) {
+      $("#resultOutput").append("<li>" + userInputs  + "</li>");
     }
   }
   event.preventDefault();
