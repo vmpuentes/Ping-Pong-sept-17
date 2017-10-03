@@ -6,29 +6,30 @@
 //var pingPongArray = ["Ping", "Pong", "PING-PONG"];
 //var outputArray = [(<li>" "</li>)];
 function PingPong (userInput) {
-  var outputArray = [(<li>" "</li>)];
-for (var i = 1, i<= (userInput), i ++ )
+  var outputArray = [ ];
+for (var i = 1; i<= userInput.length; i ++ ) {
   if (i % 3 === 0) {
-    outputArray.push("PING!")
+    outputArray.push("PING!");
   ] else if (i % 5 === 0) {
-    outputArray.push('<img src="img/pong1.jpg">Pong!')
+    outputArray.push("PONG!");
   } else if (i % 15 === 0) {
-    outputArray.push('<img src="img/ping-pong.jpg">PING-PONG')
+    outputArray.push("PING-PONG");
+  } else if (isNaN(0) === true) {
+  alert ("Please enter a number");
   } else {
     output.push(i);
-  }
-return outputArray;
+    return outputArray;
   }
 }
 
 //User Logic
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
+      event.preventDefault();
     var userInput = parseInt($("#numberInput").val());
     var pingPongResult = PingPong(userInput);
     pingPongResult.forEach(function(userInputs) {
       $("#resultOutput").append("<li>" + userInputs  + "</li>");
-    }
-  }
-  event.preventDefault();
-}
+    });
+  });
+});
