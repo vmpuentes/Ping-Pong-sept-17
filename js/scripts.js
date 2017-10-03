@@ -6,30 +6,47 @@
 //var pingPongArray = ["Ping", "Pong", "PING-PONG"];
 //var outputArray = [(<li>" "</li>)];
 function PingPong (userInput) {
-  var outputArray = [ ];
-for (var i = 1; i<= userInput.length; i ++ ) {
+  // var outputArray = [ ];
+  for (var i = 1; i<= userInput.length; i ++ ) {
   if (i % 3 === 0) {
     outputArray.push("PING!");
-  ] else if (i % 5 === 0) {
+  } else if (i % 5 === 0) {
     outputArray.push("PONG!");
   } else if (i % 15 === 0) {
     outputArray.push("PING-PONG");
   } else if (isNaN(0) === true) {
-  alert ("Please enter a number");
+    alert ("Please enter a number");
   } else {
     output.push(i);
     return outputArray;
   }
-}
+};
 
 //User Logic
 $(document).ready(function() {
-  $("#formOne").submit(function(event) {
-      event.preventDefault();
-    var userInput = parseInt($("#numberInput").val());
-    var pingPongResult = PingPong(userInput);
-    pingPongResult.forEach(function(userInputs) {
-      $("#resultOutput").append("<li>" + userInputs  + "</li>");
+  $("form#output").submit(function(event) {
+    event.preventDefault();
+      var userInput = parseInt($("formOne#numberInput").val());
+      alert(userInput);
+    // var pingPongResult = [];
+    //  pingPongResult.forEach(function(userInput) {
+      var pingPongResult = [];
     });
   });
+      outputArray.forEach(function(outputArray) {
+        pingPongResult.push(outputArray);
+    $("#resultOutput").append("<li>" + pingPongResult + "</li>");
+  });
+  alert(outputArray);
 });
+
+
+//other posibility for line 32
+    // var pingPongResult = [];
+    //   outputArray.forEach(function(outputArray) {
+    //     pingPongResult.push(outputArray);
+    //   });
+//line 33 could be
+    var pingPongResult = pingPong(userInput) {
+
+    }
