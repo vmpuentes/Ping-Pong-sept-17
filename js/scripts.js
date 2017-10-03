@@ -5,7 +5,7 @@
 //---in the HTML file.
 //var pingPongArray = ["Ping", "Pong", "PING-PONG"];
 //var outputArray = [(<li>" "</li>)];
-function PingPong (intialInput) {
+function PingPong (userInput) {
   var outputArray = [(<li>" "</li>)];
 for (var i = 1, i<= (intialInput), i ++ )
   if (i % 3 === 0) {
@@ -24,13 +24,11 @@ return outputArray;
 //User Logic
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
-    event.preventDefault();
     var userInput = parseInt($("#numberInput").val());
-    var pingPongResult = PingPong(intialInput);
-    pingPongResult.forEach(number) {
-      $("ul.output").append("<li>" + number + "</li>");
+    var pingPongResult = PingPong(userInput);
+    pingPongResult.forEach(userInput) {
+      $("#resultOutput").append("<li>" +  + "</li>");
     }
-
-
   }
+  event.preventDefault();
 }
